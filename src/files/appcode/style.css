@@ -1,0 +1,172 @@
+body{
+	margin:0;
+	padding:0;
+	background-color: #3C4452;
+}
+#main{
+	margin: 80px 0px 0px 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #3C4452;
+}
+#banner{
+	position: fixed;
+	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 50px;
+  	background-color: #4C5667;
+  	display: flex;
+    align-items: center;
+}
+#footer{
+	width: 100%;
+  	height: 40px;
+  	background-color: #4C5667;
+  	font-family: Arial;
+  	text-align: center;
+}
+.whitetext{
+	font-family: Arial;
+	color: #DCE2D7;
+}
+.somewhitetext{
+	font-family: Arial;
+	color: #DCE2EC;
+}
+.greytext{
+	font-family: Arial;
+	color: #8D9EA7;
+}
+.bluetext{
+	font-family: Arial;
+	color: #03A9F3;
+}
+.orangetext{
+	font-family: Arial;
+	color: #F99300;
+}
+.yellowtext{
+	font-family: Arial;
+	color: #F9C000;
+}
+.greentext{
+	font-family: Arial;
+	color: #4CC947;
+}
+.infotext{
+	font-family: Arial;
+	color: #96A2B4;
+}
+#text_box{
+	margin-left: 10px;
+	margin-right: 170px;
+	float:left;
+    max-width:100%;
+}
+#sum_box{
+	float:left;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+#text_box_main{
+	margin-left: 10px;
+	margin-right: 10px;
+	float:left;
+    max-width:100%;
+}
+#pic_box{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#button_box{
+	clear: both;
+}
+#box_1{
+	padding-top: 10px;
+	margin: 0 auto;
+  	background-color: #353C48;
+	width: 90%;
+	max-width: 936px;
+	min-height: 160px;
+	clear: both;
+	overflow: hidden;
+	border: 1px solid #474F5B;
+	position: relative;
+}
+#box_2{
+	padding-top: 10px;
+	margin: 0 auto;
+  	background-color: #353C48;
+	width: 90%;
+	max-width: 936px;
+	clear: both;
+	overflow: hidden;
+	border: 1px solid #474F5B;
+	position: relative;
+}
+.button_box{
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color:#353C48;
+	border:1px solid #0d92d0;
+	display:inline-block;
+	cursor:pointer;
+	color:#0d92d0;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 8px;
+	text-decoration:none;
+}
+.button_box:hover {
+	background-color:#0d92d0;
+	color:#ffffff;
+}
+#window_background{
+	position: fixed;
+	left:0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.6;
+	visibility: hidden;
+	}
+.window{
+	position: fixed;
+	left: 50%;
+    margin-left: -200px;
+  	top: 50%;
+  	margin-top: -250px;
+  	width: 400px;
+  	 /* height: 500px; */
+  	background-color: #353C48;
+  	visibility: hidden; /* visible */
+  	padding: 10px;
+  	border: 1px solid #2A303A;
+}
+#province{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #353C48;
+	color: #DCE2EC;
+	font-size: 15px;
+	height: 20px;
+}
+.plot_size{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #353C48;
+	color: #DCE2EC;
+	font-size: 15px;
+	height: 20px;
+	width: 100px;
+}
+.pricelist_box{
+	background-color: #03A9F3;
+	color: #F9FDFF;
+	margin: 5px;
+	padding: 10px;
+}

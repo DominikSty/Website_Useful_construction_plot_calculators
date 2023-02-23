@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UCP calculators</title>
+	<meta charset="utf-8">
+	<meta name="author" content="DominikSty"/>
+	<meta name="Last-Modified" content="2021-01-16"/>
+	<script type="text/javascript" src="files/appcode/script.js"></script>
+	<link rel="stylesheet" href="files/appcode/style.css">
+</head>
+<body>
+
+<div id="main">
+
+	<div id="box_2">
+		<div id="text_box_main">
+			<span class="whitetext"  style="font-size:24px;">INFORMATION</span><br>
+			<span class="infotext">The site allows you to calculate the estimated price of preparing the plot for development, taking into account the connection of: gas, water supply, sewerage and electricity. The face of the plot is taken into account from outside the city limits. All prices are calculated from the average market values of the service. Indicative price lists are given during the calculation.</span><br>
+			<div id="sum_box"><span class="whitetext" style="font-size:24px;" id="sum_total">Total sum: 0 zł</span><br></div>
+		</div>
+	</div><br>
+
+	<div id="box_1">
+		<div id="text_box">
+			<span class="bluetext" style="font-size:24px;">PURCHASE OF PLOT</span><br>
+			<span class="whitetext">It allows you to calculate the average price of a plot, taking into account its size and the province in which it is located. The plot is taken into account from outside the city limits.</span>
+		</div>
+		<div id="pic_box">
+			<img src="files/images/purchase_plots.png" alt="oraz przedstawiajacy kupno dzialki" width="150px" height="150px">
+		</div><br>
+		<div class="button_box" onclick="openWindowPlots();">Calculate the price of the plot</div><br>
+		<div id="sum_box"><span class="bluetext" style="font-size:24px;" id="sum_plots_box">Sum: 0 zł</span><br></div>
+	</div><br>
+
+	<div id="box_1">
+		<div id="text_box">
+		<span class="orangetext" style="font-size:24px;">POWER CONNECTION</span><br>
+		<span class="whitetext">It allows you to estimate the price for electricity connection to the plot, the price is calculated by the power calculated in kW. The maximum length of such a link is 200m.</span>
+		</div>
+		<div id="pic_box">
+			<img src="files/images/current_connections.png" alt="oraz przedstawiajacy kupno dzialki" width="150px" height="150px">
+		</div><br>
+		<div class="button_box" onclick="openPowerWindow();">Calculate electricity price</div><br>
+		<div id="sum_box"><span class="orangetext" style="font-size:24px;" id="sum_current_box">Sum: 0 zł</span><br></div>
+	</div><br>
+
+	<div id="box_1">
+		<div id="text_box">
+		<span class="greentext" style="font-size:24px;">WATER SUPPLY CONNECTION</span><br>
+		<span class="whitetext">It allows you to estimate the price for connecting the water supply to the plot, the price is calculated by the distance of the plot from the point of attachment (most often it is the nearest road) calculated in meters.</span>
+		</div>
+		<div id="pic_box">
+			<img src="files/images/water_supply_connections.png" alt="oraz przedstawiajacy kupno dzialki" width="150px" height="150px">
+		</div><br>
+		<div class="button_box" onclick="openWaterpipeWindow();">Calculate the price of the water supply</div><br>
+		<div id="sum_box"><span class="greentext" style="font-size:24px;" id="sum_water_supply_box">Sum: 0 zł</span><br></div>
+	</div><br>
+
+	<div id="box_1">
+		<div id="text_box">
+		<span class="yellowtext" style="font-size:24px;">GAS PIPELINE CONNECTION</span><br>
+		<span class="whitetext">It allows you to estimate the price for connecting the gas pipeline to the plot, the price is calculated by the distance of the plot from the point of attachment (most often it is the nearest road) calculated in meters.</span>
+		</div>
+		<div id="pic_box">
+			<img src="files/images/gas_connections.png" alt="oraz przedstawiajacy kupno dzialki" width="150px" height="150px">
+		</div><br>
+		<div class="button_box" onclick="openGasPipelineWindow();">Calculate the price of the gas pipeline</div><br>
+		<div id="sum_box"><span class="yellowtext" style="font-size:24px;" id="sum_gas_pipeline_box">Sum: 0 zł</span><br></div>
+	</div><br>
+
+	<div id="box_1">
+		<div id="text_box">
+		<span class="greytext" style="font-size:24px;">SEWER CONNECTION</span><br>
+		<span class="whitetext">It allows you to estimate the price for connecting sewerage to the plot, the price is calculated by the distance of the plot from the point of attachment (most often it is the nearest road) calculated in meters.</span>
+		</div>
+		<div id="pic_box">
+			<img src="files/images/sewer_connections.png" alt="oraz przedstawiajacy kupno dzialki" width="150px" height="150px">
+		</div><br>
+		<div class="button_box" onclick="openSewerWindow();">Calculate the price of sewerage</div><br>
+		<div id="sum_box"><span class="greytext" style="font-size:24px;" id="sum_sewer_box">Sum: 0 zł</span><br></div>
+	</div><br>
+
+	<div id="banner">
+		<img src="files/images/logo50x50.png" alt="logo sprony przedstawiajace kalkulator" width="50px" height="50px">
+		<span class="whitetext" style="font-size:24px;">Useful construction plot calculators</span>
+	</div>
+
+	<div id="footer">
+		<span class="greytext" style="font-size:13px;">Internet Technologies - Project<br> DominikSty </span>
+	</div>
+
+
+	<div id="window_background"></div>
+
+	<div class="window" id="purchase_plots_window">
+		<span class="somewhitetext" style="font-size:24px;">PURCHASE OF PLOT</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<span class="greytext" style="font-size:17px;">Select a province</span><br>
+		<select id="province">
+  			<option value="114">dolnośląskie</option>
+  			<option value="86">kujawsko-pomorskie</option>
+  			<option value="112">lubelskie</option>
+  			<option value="75">lubuskie</option>
+  			<option value="97">łódzkie</option>
+  			<option value="146">małopolskie</option>
+  			<option value="215">mazowieckie</option>
+  			<option value="87">opolskie</option>
+  			<option value="82">podkarpackie</option>
+  			<option value="114">podlaskie</option>
+  			<option value="173">pomorskie</option>
+  			<option value="132">śląskie</option>
+  			<option value="103">świętokrzyskie</option>
+  			<option value="72">warmińsko-mazurskie</option>
+  			<option value="130">wielkopolskie</option>
+  			<option value="122">zachodniopomorskie</option>
+		</select><br>
+		<span class="greytext" style="font-size:17px;">Enter the size of the plot</span><br>
+		<input type="number" name="plot_size" class="plot_size" id="plot_size"><span class="greytext" style="font-size:15px;">&nbspm<sup>2</sup></span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<span class="somewhitetext" style="font-size:17px;" id="sum_plots_box_window">Sum: 0 zł</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="button_box"  onclick="addWindowPlots();">Calculate</div><div class="button_box" onclick="closeWindowPlots();">Close</div><br>
+	</div>
+
+	<div class="window" id="window_current">
+		<span class="somewhitetext" style="font-size:24px;">POWER CONNECTION</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="pricelist_box">
+			<b>FEES</b><br>
+			The price for 1kW of electricity is 175zł<br>
+		</div>
+		<span class="greytext" style="font-size:17px;">Specify the power of current to be supplied to the plot</span><br>
+		<input type="number" name="current_distance" class="plot_size" id="current_distance"><span class="greytext" style="font-size:15px;">&nbspkW</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<span class="somewhitetext" style="font-size:17px;" id="sum_current_box_window">Sum: 0 zł</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="button_box"  onclick="addPowerWindow();">Calculate</div><div class="button_box" onclick="closePowerWindow();">Close</div><br>
+	</div>
+
+	<div class="window" id="water_supply_window">
+		<span class="somewhitetext" style="font-size:24px;">WATER SUPPLY CONNECTION</span>
+		<hr style="border:0px; background:#474F5B; height:1px;"><div class="pricelist_box">
+			<b>FEES</b><br>
+			FEES preliminary: 1000zł<br>
+			The price for 1m is 300zł<br>
+		</div>
+		<span class="greytext" style="font-size:17px;">Enter the distance from the point of attachment to the plot</span><br>
+		<input type="number" name="water_supply_distance" class="plot_size" id="water_supply_distance"><span class="greytext" style="font-size:15px;">&nbspm<sup>2</sup></span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<span class="somewhitetext" style="font-size:17px;" id="sum_water_supply_box_window">Sum: 0 zł</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="button_box"  onclick="addWaterpipeWindow();">Calculate</div><div class="button_box" onclick="closeWaterpipeWindow();">Close</div><br>
+	</div>
+
+	<div class="window" id="gas_pipeline_window">
+		<span class="somewhitetext" style="font-size:24px;">GAS PIPELINE CONNECTION</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="pricelist_box">
+			<b>FEES</b><br>
+			Price for 1m is 50zł<br>
+			Gas connection construction project: 1750zł<br>
+			Connection fee: 1800zł<br>
+			Installation of gas cabinet: 450zł<br>
+			Reception of gas connection: 125zł<br>
+		</div>
+		<span class="greytext" style="font-size:17px;">Enter the distance from the point of attachment to the plot</span><br>
+		<input type="number" name="gas_pipeline_distance" class="plot_size" id="gas_pipeline_distance"><span class="greytext" style="font-size:15px;">&nbspm</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<span class="somewhitetext" style="font-size:17px;" id="sum_gas_pipeline_box_window">Sum: 0 zł</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="button_box"  onclick="addGasPipelineWindow();">Calculate</div><div class="button_box" onclick="closeGasPipelineWindow();">Close</div><br>
+	</div>
+
+	<div class="window" id="sewer_window">
+		<span class="somewhitetext" style="font-size:24px;">SEWER CONNECTION</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="pricelist_box">
+			<b>FEES</b><br>
+			FEES preliminary: 1000zł<br>
+			The price for 1m is 300zł<br>
+		</div>
+		<span class="greytext" style="font-size:17px;">Enter the distance from the point of attachment to the plot</span><br>
+		<input type="number" name="sewer_distance" class="plot_size" id="sewer_distance"><span class="greytext" style="font-size:15px;">&nbspm</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<span class="somewhitetext" style="font-size:17px;" id="sum_sewer_box_window">Sum: 0 zł</span>
+		<hr style="border:0px; background:#474F5B; height:1px;">
+		<div class="button_box"  onclick="addSewerWindow();">Calculate</div><div class="button_box" onclick="closeSewerWindow();">Close</div><br>
+	</div>
+
+
+</div>
+
+</body>
+</html>
