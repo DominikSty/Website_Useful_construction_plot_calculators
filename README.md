@@ -1,4 +1,4 @@
-# Website - Useful construction plot calculators
+# Website - Useful construction plot calculators (HTML, CSS, JS)
 ## Introduction
 The website presents several simple calculators that allow you to calculate the estimated purchase price of a building plot, electricity, gas, water and sewage connections. All prices are based on average prices from all over Poland of major companies dealing with a given service. Price status for 2020.
 ## Project structure and directory description
